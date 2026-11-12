@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #050505;
+    background-image: url("https://wallpapercave.com/uwp/uwp4975201.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   MENU DE NAVEGAÇÃO
+===================================================== */
+
+
+
+
+/* =====================================================
+   CONTEÚDO PRINCIPAL
+===================================================== */
+
+main {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.82);
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    border-radius: 20px;
+    box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 0, 0, 0.08);
+    backdrop-filter: blur(4px);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+h1 {
+    margin: 35px 0 25px;
+    text-align: center;
+    font-size: clamp(28px, 4vw, 45px);
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 0.5px red;
+    text-shadow:
+        0 0 5px red,
+        0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+h2 {
+    margin: 25px 0 20px;
+    text-align: center;
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+h3 {
+    margin: 25px 0 20px;
+    padding: 8px;
+    text-align: center;
+    font-size: clamp(22px, 3vw, 30px);
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 8px;
+    text-shadow:
+        0 0 5px red,
+        0 0 12px rgba(255, 0, 0, 0.8);
+}
+
+/* =====================================================
+   PARÁGRAFOS
+===================================================== */
+
+p {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 8px 12px;
+    text-align: center;
+    color: white;
+    font-size: clamp(16px, 2vw, 21px);
+    font-style: italic;
+    line-height: 1.7;
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0.7);
+}
+
+/* =====================================================
+   IMAGENS E GIFS
+===================================================== */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+img:not([width]) {
+    object-fit: contain;
+}
+
+/* =====================================================
+   LISTAS
+===================================================== */
+
+ol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 25px auto;
+    padding: 20px 25px 20px 50px;
+    color: white;
+    font-size: 19px;
+    background: rgba(15, 15, 15, 0.85);
+    border-left: 3px solid #b00000;
+    border-radius: 8px;
+}
+
+li {
+    padding: 3px;
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+}
+
+li::marker {
+    color: #ff3333;
+}
+
+/* =====================================================
+   LINKS GERAIS
+===================================================== */
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff5555;
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 12px 24px;
+    background: #111;
+    color: #ff3333;
+    border: 2px solid #8b0000;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(139, 0, 0, 0.6);
+    transition: 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    color: white;
+    background: #8b0000;
+    border-color: red;
+    box-shadow: 0 0 15px red;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   TABELA
+===================================================== */
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.88);
+    color: white;
+}
+
+caption {
+    padding: 12px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 8px red;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #a00000;
+    text-align: center;
+    font-size: 17px;
+}
+
+th {
+    color: white;
+    background: #700000;
+    text-shadow: 0 0 5px red;
+}
+
+td {
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(100, 0, 0, 0.25);
+}
+
+tbody tr:hover {
+    background: rgba(139, 0, 0, 0.4);
+}
+
+/* =====================================================
+   VÍDEO
+===================================================== */
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 25px auto;
+    border: 4px solid #555;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    background-color: #111;
+}
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+
+#lista,
+#contato {
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 25px;
+    text-align: center;
+    background: rgba(15, 15, 15, 0.94);
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    border-top: 3px solid #8b0000;
+    border-radius: 12px;
+    opacity: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+form label,
+label {
+    display: block;
+    margin: 8px 0 4px;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    background: transparent;
+}
+
+form input:not([type="submit"]):not([type="reset"]),
+form textarea,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 12px;
+    color: white;
+    background: #202020;
+    border: 1px solid #666;
+    border-radius: 6px;
+    font: inherit;
+}
+
+form textarea,
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #b00000;
+    border-color: red;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #bbb;
+}
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+footer,
+.footer {
+    margin-top: 50px;
+    padding: 35px 20px;
+    color: white;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.97);
+    border-top: 2px solid #8b0000;
+    box-shadow: 0 -5px 20px rgba(255, 0, 0, 0.15);
+}
+
+.footer h2 {
+    color: #ff3333;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin: 10px auto;
+}
+
+.footer hr {
+    width: 80%;
+    max-width: 600px;
+    margin: 25px auto;
+    border: none;
+    border-top: 1px solid #555;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a,
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+footer a:hover {
+    color: #ff3333;
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 25px !important;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* =====================================================
+   ACESSIBILIDADE
+===================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #ff5555;
+    outline-offset: 3px;
+}
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    nav {
+        padding: 8px;
+    }
+
+    nav ul {
+        gap: 3px;
+    }
+
+    nav a {
+        margin: 3px;
+        padding: 9px 10px;
+        font-size: 14px;
+    }
+
+    main {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        margin-top: 25px;
+    }
+
+    p {
+        padding: 5px;
+    }
+
+    ol {
+        padding-left: 40px;
+        font-size: 17px;
+    }
+
+    #lista,
+    #contato {
+        padding: 18px;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+        max-width: 100%;
+    }
+}
+
+/* =====================================================
+   TELAS MUITO PEQUENAS
+===================================================== */
+
+@media (max-width: 360px) {
+    nav a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #lista,
+    #contato {
+        padding: 12px;
+    }
+
+    th,
+    td {
+        font-size: 12px;
+        padding: 6px 3px;
+    }
+}
+
+
+/* ======================================
+   TEMA CLARO
+====================================== */
+
+body.tema-claro {
+    background-color: #f0f0f0;
+    background-image: none;
+    color: #222;
+}
+
+.tema-claro main {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #ccc;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.tema-claro h1,
+.tema-claro h2,
+.tema-claro h3,
+.tema-claro p,
+.tema-claro li,
+.tema-claro label {
+    color: #222;
+    text-shadow: none;
+    -webkit-text-stroke: 0;
+}
+
+.tema-claro h3 {
+    background: #e5e5e5;
+}
+
+.tema-claro ol {
+    background: #e5e5e5;
+    color: #222;
+    border-left-color: #555;
+}
+
+.tema-claro .bg-dark {
+    background-color: #ddd !important;
+}
+
+.tema-claro .navbar-dark .nav-link,
+.tema-claro .navbar-brand {
+    color: #222;
+}
+
+.tema-claro .navbar-dark .nav-link:hover {
+    color: #8b0000;
+}
+
+.tema-claro .form-control {
+    background-color: white;
+    color: #222;
+    border-color: #aaa;
+}
+
+.tema-claro .form-control::placeholder {
+    color: #666;
+}
+
+.tema-claro .footer {
+    background: #ddd !important;
+    color: #222 !important;
+}
+
+.tema-claro .footer p,
+.tema-claro .footer h2,
+.tema-claro .footer a {
+    color: #222 !important;
+}
+
+.tema-claro .table {
+    color: #222;
+}
+
+.tema-claro #alternar-tema {
+    color: #222;
+    border-color: #555;
+}
+
+.tema-claro #alternar-tema:hover {
+    background: #555;
+    color: white;
+}
